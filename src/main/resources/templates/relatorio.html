@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Relatório Financeiro</title>
+</head>
+<body>
+<h1>Relatório Financeiro</h1>
+<p>Total de Receitas: R$ <span th:text="${totalReceitas}"></span></p>
+<p>Total de Despesas: R$ <span th:text="${totalDespesas}"></span></p>
+<p>Saldo Final: R$ <span th:text="${saldo}"></span></p>
+<a th:href="@{/}">Voltar</a>
+</body>
+</html>

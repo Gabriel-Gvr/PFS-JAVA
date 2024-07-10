@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Adicionar Transação</title>
+</head>
+<body>
+<h1>Adicionar Transação</h1>
+<form th:action="@{/adicionar}" method="post">
+    <label for="descricao">Descrição:</label>
+    <input type="text" id="descricao" name="descricao"><br>
+    <label for="valor">Valor:</label>
+    <input type="number" id="valor" name="valor"><br>
+    <label for="receita">Receita:</label>
+    <input type="radio" id="receita" name="receita" value="true"> Sim
+    <input type="radio" id="receita" name="receita" value="false"> Não<br>
+    <input type="submit" value="Adicionar">
+</form>
+<p th:text="${mensagem}"></p>
+<a th:href="@{/}">Voltar</a>
+</body>
+</html>

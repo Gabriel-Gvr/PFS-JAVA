@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Listar Transações</title>
+</head>
+<body>
+<h1>Listar Transações</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Descrição</th>
+        <th>Valor</th>
+        <th>Tipo</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="transacao : ${transacoes}">
+        <td th:text="${transacao.id}"></td>
+        <td th:text="${transacao.descricao}"></td>
+        <td th:text="${transacao.valor}"></td>
+        <td th:text="${transacao.receita} ? 'Receita' : 'Despesa'"></td>
+    </tr>
+    </tbody>
+</table>
+<a th:href="@{/}">Voltar</a>
+</body>
+</html>
